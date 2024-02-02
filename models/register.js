@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       userId: DataTypes.INTEGER,
       courseId: DataTypes.INTEGER,
-      coursecompleted: DataTypes.BOOLEAN,
+      courseCompleted: DataTypes.BOOLEAN,
     },
     {
       sequelize,
