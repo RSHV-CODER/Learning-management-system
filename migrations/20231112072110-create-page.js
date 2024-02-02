@@ -1,18 +1,6 @@
 'use strict';
-
-/**
- * Sequelize migration for creating 'Pages' table.
- * This table stores information about pages, including title, content, and associated chapter and course.
- *
- * @type {import('sequelize-cli').Migration}
- */
+/** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  /**
-   * Applies the migration, creating the 'Pages' table.
-   *
-   * @param {import('sequelize').QueryInterface} queryInterface
-   * @param {import('sequelize').Sequelize} Sequelize
-   */
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Pages', {
       id: {
@@ -43,13 +31,6 @@ module.exports = {
       }
     });
   },
-
-  /**
-   * Reverts the migration, dropping the 'Pages' table.
-   *
-   * @param {import('sequelize').QueryInterface} queryInterface
-   * @param {import('sequelize').Sequelize} Sequelize
-   */
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Pages');
   }

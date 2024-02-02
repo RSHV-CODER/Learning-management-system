@@ -1,18 +1,6 @@
 'use strict';
-
-/**
- * Sequelize migration for creating 'Regpages' table.
- * This table stores information about registered pages, including user, course, chapter, page, and completion status.
- *
- * @type {import('sequelize-cli').Migration}
- */
+/** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  /**
-   * Applies the migration, creating the 'Regpages' table.
-   *
-   * @param {import('sequelize').QueryInterface} queryInterface
-   * @param {import('sequelize').Sequelize} Sequelize
-   */
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Regpages', {
       id: {
@@ -33,7 +21,7 @@ module.exports = {
       pageId: {
         type: Sequelize.INTEGER
       },
-      isComplete: { // Changed from 'iscomplete' to 'isComplete' for consistent naming
+      iscomplete: {
         type: Sequelize.BOOLEAN
       },
       createdAt: {
@@ -46,13 +34,6 @@ module.exports = {
       }
     });
   },
-
-  /**
-   * Reverts the migration, dropping the 'Regpages' table.
-   *
-   * @param {import('sequelize').QueryInterface} queryInterface
-   * @param {import('sequelize').Sequelize} Sequelize
-   */
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Regpages');
   }

@@ -1,20 +1,8 @@
 'use strict';
-
-/**
- * Sequelize migration for creating 'Answers' table.
- * This table stores information about answers to questions, including question, answer, options, student answer, associated chapter, user, and timestamps.
- *
- * @type {import('sequelize-cli').Migration}
- */
+/** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  /**
-   * Applies the migration, creating the 'Answers' table.
-   *
-   * @param {import('sequelize').QueryInterface} queryInterface
-   * @param {import('sequelize').Sequelize} Sequelize
-   */
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Answers', {
+    await queryInterface.createTable('Assignments', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -42,9 +30,6 @@ module.exports = {
       chapterId: {
         type: Sequelize.INTEGER
       },
-      userId: {
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -55,14 +40,7 @@ module.exports = {
       }
     });
   },
-
-  /**
-   * Reverts the migration, dropping the 'Answers' table.
-   *
-   * @param {import('sequelize').QueryInterface} queryInterface
-   * @param {import('sequelize').Sequelize} Sequelize
-   */
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Answers');
+    await queryInterface.dropTable('Assignments');
   }
 };
