@@ -1,6 +1,18 @@
 'use strict';
-/** @type {import('sequelize-cli').Migration} */
+
+/**
+ * Sequelize migration for creating 'Chapters' table.
+ * This table stores information about chapters, including title, description, associated course, and timestamps.
+ *
+ * @type {import('sequelize-cli').Migration}
+ */
 module.exports = {
+  /**
+   * Applies the migration, creating the 'Chapters' table.
+   *
+   * @param {import('sequelize').QueryInterface} queryInterface
+   * @param {import('sequelize').Sequelize} Sequelize
+   */
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Chapters', {
       id: {
@@ -28,6 +40,13 @@ module.exports = {
       }
     });
   },
+
+  /**
+   * Reverts the migration, dropping the 'Chapters' table.
+   *
+   * @param {import('sequelize').QueryInterface} queryInterface
+   * @param {import('sequelize').Sequelize} Sequelize
+   */
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Chapters');
   }
