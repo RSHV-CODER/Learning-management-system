@@ -27,7 +27,7 @@ module.exports = {
       courseId: {
         type: Sequelize.INTEGER
       },
-      courseCompleted: { // Indicates whether the course is marked as completed or not
+      coursecompleted: { // Indicates whether the course is marked as completed or not
         type: Sequelize.BOOLEAN
       },
       createdAt: {
