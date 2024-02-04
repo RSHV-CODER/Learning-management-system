@@ -1,6 +1,7 @@
 # learning management system
 A Learning Management System (LMS) is a software application or platform designed to facilitate the administration, documentation, tracking, reporting, and delivery of educational courses or training programs.
-#features
+# features
+
 # Educators can create courses
 Educators, when signed in, should easily manage courses:
 Create a Course: Begin by providing a name and description for your course.
