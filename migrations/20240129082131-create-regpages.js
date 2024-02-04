@@ -33,7 +33,7 @@ module.exports = {
       pageId: {
         type: Sequelize.INTEGER
       },
-      isComplete: { // Changed from 'iscomplete' to 'isComplete' for consistent naming
+      iscomplete: { // Changed from 'iscomplete' to 'isComplete' for consistent naming
         type: Sequelize.BOOLEAN
       },
       createdAt: {
