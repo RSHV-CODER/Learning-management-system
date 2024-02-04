@@ -27,7 +27,7 @@ fs.readdirSync(__dirname)
       file.indexOf(".") !== 0 &&
       file !== basename &&
       file.slice(-3) === ".js" &&
-      !file.includes(".test.js") // Adjusted the check to exclude test files
+      file.indexOf(".test.js") === -1
     );
   })
   .forEach((file) => {
